@@ -1,0 +1,148 @@
+?html, body, h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	height: 100%;
+	line-height: 1;
+}
+.wrapper {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 100vmin;
+	transform: translate(-50%, -50%);
+}
+.wrapper:before {
+	content: '';
+	display: block;
+	padding-top: 75%;
+}
+.youareanidiot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border: 0.6vmin solid #000;
+	background-color: #ff1;
+	text-align: center;
+	animation: invert-box 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-box {
+	50% {
+		background-color: #f11;
+		border-color: #fff;
+	}
+}
+.youareanidiot .text-wrapper {
+	position: relative;
+	height: 46%;
+}
+.youareanidiot .text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #000;
+	font-size: 10.1vmin;
+	font-family: 'Yu Mincho','YuMincho',serif;
+	font-weight: bold;
+	text-align: center;
+	animation: invert-text 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-text {
+	50% {
+		color: #fff;
+	}
+}
+.youareanidiot .text .exclamation {
+	font-size: 20%;
+}
+.youareanidiot .faces-wrapper {
+	padding-top: 7.5vmin;
+	height: 54%;
+}
+.youareanidiot .faces {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 72%;
+}
+.youareanidiot .face {
+	position: relative;
+	width: 11.7vmin;
+	height: 11.7vmin;
+	border: 0.7vmin solid #000;
+	border-radius: 50%;
+	animation: invert-face 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-face {
+	50% {
+		border-color: #fff;
+	}
+}
+.youareanidiot .eyes {
+	position: relative;
+	top: 2.6vmin;
+}
+.youareanidiot .eye_left, .youareanidiot .eye_right {
+	position: absolute;
+	top: 0;
+	width: 2.4vmin;
+	height: 2.4vmin;
+	border: 0px solid transparent;
+	border-radius: 50%;
+	background-color: #000;
+}
+.youareanidiot .eye_left {
+	left: 2.92vmin;
+	animation: invert-eye_left 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-eye_left {
+	50% {
+		top: calc(-0.74vmin / 2);
+		left: calc(2.92vmin - 0.74vmin / 2);
+		border: 0.74vmin solid #fff;
+		width: calc(2.4vmin - 0.74vmin);
+		height: calc(2.4vmin - 0.74vmin);
+	}
+}
+.youareanidiot .eye_right {
+	right: 2.92vmin;
+	animation: invert-eye_right 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-eye_right {
+	50% {
+		top: calc(-0.74vmin / 2);
+		right: calc(2.92vmin - 0.74vmin / 2);
+		border: 0.74vmin solid #fff;
+		width: calc(2.4vmin - 0.74vmin);
+		height: calc(2.4vmin - 0.74vmin);
+	}
+}
+.youareanidiot .mouth {
+	position: absolute;
+	bottom: 14%;
+	left: 50%;
+	margin: 0 auto;
+	width: 13.1vmin;
+	height: 18.3vmin;
+	border-width: 0.7vmin;
+	border-style: solid;
+	border-color: transparent transparent #000 transparent;
+	border-radius: 0 0 50% 50% / 0 0 65% 65%;
+	transform: translate(-50%, 0);
+	animation: invert-mouth 0.664s steps(1, end) 0s infinite;
+}
+@keyframes invert-mouth {
+	50% {
+		border-color: transparent transparent #fff transparent;
+	}
+}
